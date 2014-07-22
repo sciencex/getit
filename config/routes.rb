@@ -1,6 +1,4 @@
 GetIt::Application.routes.draw do
-  Umlaut::Routes.new(self).draw
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -25,6 +23,10 @@ GetIt::Application.routes.draw do
   match 'holding_requests/:service_response_id/:type(/:pickup_location)', :to => 'holding_requests#create', :as => :create_holding_request, :via => :get
   # GET a holding request (confirmation of creation)
   match 'holding_requests/:service_response_id', :to => 'holding_requests#show', :as => :holding_request, :via => :get
+
+  get 'articles', to: 'articles#index', as: :articles
+
+  Umlaut::Routes.new(self).draw
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
