@@ -20,6 +20,8 @@ module Views
           if params["action"].eql?("journal_list") or params["action"].eql?("journal_search")
             breadcrumbs << link_to('E-Journals', :controller=>'search')
             breadcrumbs << "Results"
+          elsif current_primary_institution.code == :NS2
+            breadcrumbs << 'Articles & More'
           else
             breadcrumbs << "Journals"
           end
