@@ -1,0 +1,23 @@
+<script src="https://library.nyu.edu/scripts/ebscohostsearch.js" type="text/javascript"></script>
+<script type="text/javascript">
+  function ebscoPreProcess(form) {
+    form.bquery.value = form.uquery.value;
+  }
+</script>
+<div id="article-search">
+  <form id="ebscohostCustomSearchBox" action="" onsubmit="return ebscoHostSearchGo(this);" method="post" class="form-search">
+    <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+    <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="https://ezproxy.library.nyu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=0&amp;custid=s8884376&amp;groupid=main&amp;profid=eds&amp;mode=and&amp;lang=en&amp;authtype=ip,uid" />
+    <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+    <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+AND+" />
+    <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+    <h2><%= t 'articles.search.title' %></h2>
+    <div class="nyu-tip hidden-phone">
+      <a href="http://nyu.libguides.com/webscaletrials" target="_blank">
+        <%= t 'articles.search.scope_help' %>
+      </a>
+    </div>
+    <input id="ebscohostsearchtext" name="ebscohostsearchtext" type="text" size="45" />
+    <%= submit_tag t('articles.search.submit_text'), class: "btn" %>
+  </form> 
+</div>

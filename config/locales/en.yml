@@ -8,6 +8,27 @@ en:
     holdings:
       request_text: Request
       login_text: Login for Request Options
+  articles:
+    search:
+      title: Search for Articles
+      scope_help: What Am I Searching?
+      submit_text: Search
+    citation_linker:
+      title: Find a Specific Article
+      optional_title: Optional Information (enter as much as you know)
+      linking_help: Having trouble finding your article?
+      submit_text: Find
+      labels:
+        journal_title: Journal Title
+        issn: ISSN
+        article_title: Article Title
+        author_last_name: Author Last Name
+        author_first_name: Author First Name
+        date: Date
+        volume: Volume
+        issue: Issue
+        start_page: Start page
+        end_page: End page
   holding_requests:
     show:
       scan: Your scan request has been processed. You will receive an email when the item is available.
