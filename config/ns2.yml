@@ -1,0 +1,25 @@
+NS2:
+  name: New School Libraries
+  auth:
+    code: NS
+  ip_addresses:
+    - 128.1.1.1
+  active_tab: articles
+  views:
+    css: search_ns
+    dir: ns
+    breadcrumbs:
+      title: New School Libraries
+      url: http://library.newschool.edu
+    tabs:
+      all:
+        display: 'Books & More'
+        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?vid=NS2'
+        tip: Find resources in All Consortium Libraries
+      articles:
+        display: 'Articles & More'
+        tip: 'Search for articles, images and media by subject'
+      reserves:
+        display: Course Reserves
+        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NS2&tab=nscr'
+        tip: 'Search for Reserves by title or instructor name'
