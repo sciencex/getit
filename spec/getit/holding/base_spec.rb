@@ -58,6 +58,10 @@ module GetIt
           expect(service_response.view_data[:expired]).to be true
         end
       end
+      describe '#hash' do
+        subject { holding.hash }
+        it { should eq service_response.hash }
+      end
       context 'when initialized without any arguments' do
         it 'should raise an ArgumentError' do
           expect { Base.new }.to raise_error ArgumentError

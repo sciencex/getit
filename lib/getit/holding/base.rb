@@ -30,6 +30,10 @@ module GetIt
         service_response.save!
       end
 
+      def hash
+        service_response.hash 
+      end
+
       protected
       extend Forwardable
       # Delegate view_data and destroy! method to the service_response
