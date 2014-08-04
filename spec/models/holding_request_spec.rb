@@ -1,8 +1,8 @@
 require 'rails_helper'
 describe HoldingRequest, vcr: {cassette_name: 'holding requests'} do
-  let(:service_response) { build(:nyu_aleph_service_response) }
+  let(:service_response) { create(:nyu_aleph_service_response) }
   let(:holding) { GetIt::Holding::NyuAleph.new(service_response) }
-  let(:user) { build(:aleph_user) }
+  let(:user) { create(:aleph_user) }
   subject(:holding_request) { HoldingRequest.new(holding, user) }
   it { should be_a HoldingRequest }
   describe '#holding' do
