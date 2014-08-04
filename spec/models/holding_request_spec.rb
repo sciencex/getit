@@ -28,6 +28,10 @@ describe HoldingRequest, vcr: {cassette_name: 'holding requests'} do
     it { should be_an Exlibris::Aleph::Patron::Record::Item::CreateHold }
     it { should_not be_error }
   end
+  describe '#hash' do
+    subject { holding_request.hash }
+    it { should eq [holding, user].hash }
+  end
   context 'when initialized without any arguments' do
     it 'should raise an ArgumentError' do
       expect { HoldingRequest.new }.to raise_error ArgumentError

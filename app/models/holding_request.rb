@@ -19,6 +19,10 @@ class HoldingRequest
     item.create_hold(parameters)
   end
 
+  def hash
+    [holding, user].hash
+  end
+
   private
   def item
     @item ||= record.item(item_id)
