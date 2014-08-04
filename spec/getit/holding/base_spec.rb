@@ -2,7 +2,7 @@ require 'rails_helper'
 module GetIt
   module Holding
     describe Base do
-      let(:service_response) { build(:holding_service_response) }
+      let(:service_response) { create(:holding_service_response) }
       subject(:holding) { Base.new(service_response) }
       it { should be_a Base }
       describe '#service_response' do
