@@ -11,8 +11,16 @@ class HoldingRequest
     @user = user
   end
 
+  # Makes a call to the Aleph API to determine if the
+  # GetIt::AlephPatron has access to place a request
+  # on the item, therefore, this call is a great candidate
+  # for caching
   def circulation_policy
-    @circulation_policy ||= item.circulation_policy
+    @circulation_policy ||= begin
+      Rails.cache.fetch("#{cache_id}.circulation_policy", expire_in: 1.hour) do
+        item.circulation_policy
+      end
+    end
   end
 
   def create_hold(parameters)
@@ -24,6 +32,10 @@ class HoldingRequest
   end
 
   private
+  def cache_id
+    "#{self.class.name}-#{hash}"
+  end
+
   def item
     @item ||= record.item(item_id)
   end
