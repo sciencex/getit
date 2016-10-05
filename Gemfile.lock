@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: 879994d761d43f883a5a723ba4b4db024fc4dfeb
-  tag: v2.2.0
+  revision: 170a9edfdfadbed3dfaa2bd64e6ae66bb1abfaca
+  branch: feature/ejournals_issue
   specs:
     exlibris-nyu (2.2.0)
       exlibris-aleph (~> 2.0.4)
@@ -282,7 +282,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile2 (2.1.0)
-    minitest (5.9.0)
+    minitest (5.9.1)
     multi_json (1.12.1)
     multi_test (0.1.2)
     multi_xml (0.5.5)
@@ -299,9 +299,8 @@ GEM
       net-ssh (>= 2.6.5)
     netrc (0.11.0)
     newrelic_rpm (3.9.9.275)
-    nokogiri (1.6.8)
+    nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
-      pkg-config (~> 1.1.7)
     nori (2.6.0)
     notiffany (0.1.1)
       nenv (~> 0.1)
@@ -326,7 +325,6 @@ GEM
     options (2.3.2)
     orm_adapter (0.5.0)
     phantomjs (2.1.1.0)
-    pkg-config (1.1.7)
     poltergeist (1.5.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
